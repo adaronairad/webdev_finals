@@ -34,7 +34,7 @@ body {
     display: flex;
 }
 
-.navbar ul li a, .user-actions a {
+.navbar ul li a {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -44,9 +44,50 @@ body {
     color: #333;
 }
 
-.navbar ul li a:hover, .user-actions a:hover {
+.user-actions a:not(.login) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: #333;
+    border-radius: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.login:hover {
     color: #4CAF50;
     text-decoration: underline;
+}
+
+.navbar ul li a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+.user-actions a:hover:not(.login) {
+    text-decoration: underline;
+    color: white;
 }
 
 .user-actions{
@@ -66,7 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 90px 0;
+    padding: 120px 0;
 }
 
 
@@ -126,6 +167,10 @@ body {
     border: none;
     outline: none;
     font-size: 15px;
+}
+
+.search-bar input::placeholder {
+    color: #ccc;
 }
 
 .search-icon i {
@@ -193,7 +238,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 90px 0;
     background-color: white;
 }
 
@@ -308,7 +352,6 @@ body {
 
 .testimonial-item:hover {
     background-color: #4CAF50;
-    text-decoration: underline;
     color: white;
 }
 
